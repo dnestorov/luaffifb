@@ -33,7 +33,17 @@ Usage
 -----
 The resulting static library will be in `build/lib/<Debug|Release>/`.
 Rename the `.lib` file to `.a` if neccessary.
-Use the resulting library and the ffi.h files in your project.
+Use the resulting library and the `ffi.h` files in your project.
+
+To enable the FFi functionality use something like:
+
+```C
+void clua_openffi(lua_State *L)
+{
+	luaL_requiref(L, "ffi", &luaopen_ffi, 1);
+	lua_pop(L, 1);
+}
+```
 
 
 Documentation
