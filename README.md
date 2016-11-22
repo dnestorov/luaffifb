@@ -31,9 +31,9 @@ make
 
 Usage
 -----
-The resulting static library will be in `build/lib/<Debug|Release>/`
-Rename the `.lib` file to `.a` if neccessary
-Use the resulting library and the ffi.h files in your project
+The resulting static library will be in `build/lib/<Debug|Release>/`.
+Rename the `.lib` file to `.a` if neccessary.
+Use the resulting library and the ffi.h files in your project.
 
 
 Documentation
