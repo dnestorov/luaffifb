@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/facebook/luaffifb.svg?branch=master)](https://travis-ci.org/facebook/luaffifb)
-
 About
 -----
 This is a library for calling C function and manipulating C types from lua. It
@@ -8,11 +6,9 @@ http://luajit.org/ext_ffi.html). It can parse C function declarations and
 struct definitions that have been directly copied out of C header files and
 into lua source as a string.
 
-This is a fork of https://github.com/jmckaskill/luaffi
+This is a fork of https://github.com/facebook/luaffifb
 
-Source
-------
-https://github.com/facebook/luaffifb
+It is compatible with the Golang golua package here https://github.com/dnestorov/golua
 
 Platforms
 ---------
@@ -24,13 +20,21 @@ Runs with Lua 5.1, 5.2, and 5.3
 
 Build
 -----
+Download Premake5 binary from https://premake.github.io/download.html
+
 In a terminal:
 
 ```bash
-git clone https://github.com/facebook/luaffifb
-cd luaffifb
-luarocks make
+premake5 --luainc="<full_path_to_lua_h>" gmake
+make 
 ```
+
+Usage
+-----
+The resulting static library will be in `build/lib/<Debug|Release>/`
+Rename the `.lib` file to `.a` if neccessary
+Use the resulting library and the ffi.h files in your project
+
 
 Documentation
 -------------
